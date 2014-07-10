@@ -16,5 +16,6 @@
 //= require bootstrap
 //= require underscore
 //= require backbone
-//= require ranking/models/movie
-//= require ranking/main
+//= require models/movie
+//= require views/comparison_view
+//= require main
