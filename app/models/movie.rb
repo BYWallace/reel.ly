@@ -1,4 +1,6 @@
 class Movie < ActiveRecord::Base
+  has_many :ratings
+
   def self.generate_imdb250
     top_250 = Imdb::Top250.new
     top_250.movies.each do |movie|
