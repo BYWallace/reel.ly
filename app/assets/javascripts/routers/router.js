@@ -13,7 +13,7 @@ var Router = Backbone.Router.extend({
   compareMovies: function() {
     console.log("compareMovies is firing");
     this.clearView();
-    this.view = new MovieComparisonView({collection: movieCollection});
+    this.view = new MovieComparisonView({collection: movieCollection });
     this.view.$el.appendTo(".col-md-10");
   }
 });

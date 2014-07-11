@@ -20,4 +20,3 @@
 //= require views/comparison_view
 //= require routers/router
 //= require main
-//= require background

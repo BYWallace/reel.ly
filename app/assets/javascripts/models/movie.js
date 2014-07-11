@@ -10,3 +10,5 @@ var MovieCollection = Backbone.Collection.extend({
   model: Movie,
   url: "/movies"
 });
+
+var movieCollection = new MovieCollection();
