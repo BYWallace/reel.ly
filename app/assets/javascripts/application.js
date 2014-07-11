@@ -18,4 +18,5 @@
 //= require backbone
 //= require models/movie
 //= require views/comparison_view
+//= require routers/router
 //= require main
