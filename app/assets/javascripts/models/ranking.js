@@ -1,10 +1,9 @@
 var Ranking = Backbone.Model.extend({
   defaults: {
     id: 0,
-    user_id: 0,
-    movie_id: 0,
-    win_count: 0,
-    match_count: 0
+    title: "",
+    year: 0,
+    poster_url: ""
   },
 });
 
