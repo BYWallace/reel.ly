@@ -19,6 +19,8 @@
   </div>
 </div>
 
+<script> var currentUserId = <%= current_user.id %></script>
+
 <script type="text/template" id="movie-comparison-template">
   <%% collection.each(function(movie){  %>
     <img src="<%%= movie.get('poster_url') %>" class="img-rounded img-responsive movie-choice" alt="Responsive image">

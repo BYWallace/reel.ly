@@ -1,5 +1,6 @@
 var Movie = Backbone.Model.extend({
   defaults: {
+    id: 0,
     title: "",
     year: 0,
     poster_url: ""
