@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  window.currentUserRankings.fetch();
+
   window.movieCollection.fetch().then(function() {
     var router = new Router();
     Backbone.history.start();

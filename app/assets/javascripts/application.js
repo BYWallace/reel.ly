@@ -17,6 +17,7 @@
 //= require underscore
 //= require backbone
 //= require models/movie
+//= require models/ranking
 //= require views/comparison_view
 //= require routers/router
 //= require main
