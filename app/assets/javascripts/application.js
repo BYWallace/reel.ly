@@ -19,5 +19,6 @@
 //= require models/movie
 //= require models/ranking
 //= require views/comparison_view
+//= require views/ranking_view
 //= require routers/router
 //= require main
