@@ -20,15 +20,12 @@ var MovieComparisonView = Backbone.View.extend({
         type: 'post',
         dataType: 'json'
         //don't need to send any data...just love-tapping controller
-      });
+      }).then(function(){movieCollection.fetch();}).then(function(){currentUserRankings.fetch();});
   },
 
   onSelectMovie: function(event) {
-    currentUserRankings.create({ collection: this.collection }, { success: function() {
-      this.addWin(event);
-    } });
-    this.collection.fetch();
-    currentUserRankings.fetch();
+    currentUserRankings.create({ collection: this.collection });
+    this.addWin(event);
   },
 
 

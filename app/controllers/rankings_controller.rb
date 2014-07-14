@@ -1,6 +1,6 @@
 class RankingsController < ApplicationController
   def index
-    @rankings = Ranking.where(user_id: params[:user_id]).sort_by(&:win_percentage).reverse[0..9].map {|ranking| ranking.movie }
+    @rankings = Ranking.where(user_id: params[:user_id]).where("match_count > 3").sort_by(&:win_percentage).reverse[0..9].map {|ranking| ranking.movie }
     render json: @rankings
   end
 

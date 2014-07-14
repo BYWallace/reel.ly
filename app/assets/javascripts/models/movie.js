@@ -4,7 +4,7 @@ var Movie = Backbone.Model.extend({
     title: "",
     year: 0,
     poster_url: ""
-  },
+  }
 });
 
 var MovieCollection = Backbone.Collection.extend({
