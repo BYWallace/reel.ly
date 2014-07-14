@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140710212124) do
     t.integer  "user_id"
     t.integer  "movie_id"
     t.integer  "win_count"
-    t.integer  "match_count"
+    t.integer  "match_count", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

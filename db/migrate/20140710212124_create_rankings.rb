@@ -4,7 +4,7 @@ class CreateRankings < ActiveRecord::Migration
       t.references :user
       t.references :movie
       t.integer :win_count
-      t.integer :match_count
+      t.integer :match_count, default: 0
 
       t.timestamps
     end

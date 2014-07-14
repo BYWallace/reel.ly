@@ -19,6 +19,6 @@
 
 <script type="text/template" id="movie-comparison-template">
   <%% collection.each(function(movie){  %>
-    <img src="<%%= movie.get('poster_url') %>" class="img-rounded img-responsive movie-choice" alt="Responsive image">
+    <img data-id="<%%= movie.get('id') %>" src="<%%= movie.get('poster_url') %>" class="img-rounded img-responsive movie-choice" alt="<%%= movie.get('title') %>">
   <%% }) %>
 </script>

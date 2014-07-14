@@ -14,8 +14,9 @@ var MovieComparisonView = Backbone.View.extend({
     "click img" : "onSelectMovie"
   },
 
-  onSelectMovie: function() {
-    currentUserRankings.create({ model: this.model });
+  onSelectMovie: function(event) {
+    event.preventDefault();
+    currentUserRankings.create({ collection: this.collection });
   },
 
   render: function () {

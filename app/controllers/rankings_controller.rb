@@ -5,22 +5,28 @@ class RankingsController < ApplicationController
   end
 
   def create
+     @rankings = params[:collection]
+     @rankings.each do |movie|
+      ranking = current_user.rankings.find_or_initialize_by(movie_id: movie["id"])
+      ranking.update(match_count: ranking.match_count + 1)
+     end
 
+     redirect_to root_path
   end
 
   def update
-    @ranking = Ranking.find(params[:id])
-    if @ranking.update(ranking_params)
-      render status: 200, nothing: true
-    else
-      render status: 400, nothing: true
-    end
+    # @ranking = Ranking.find(params[:id])
+    # if @ranking.update(ranking_params)
+    #   render status: 200, nothing: true
+    # else
+    #   render status: 400, nothing: true
+    # end
   end
 
   private
 
   def ranking_params
-    params.require(:ranking).permit(:win_count, :match_count)
+    params.require(:ranking).permit(:collection)
   end
 
 end
