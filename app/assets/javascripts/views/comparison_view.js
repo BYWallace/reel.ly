@@ -14,7 +14,7 @@ var MovieComparisonView = Backbone.View.extend({
     "click img" : "onSelectMovie"
   },
 
-  addWin: function(event) {
+  successCallback: function(event) {
      $.ajax({
         url: '/rankings/win/' + $(event.target).data("id"),
         type: 'post',
@@ -24,15 +24,13 @@ var MovieComparisonView = Backbone.View.extend({
   },
 
   onSelectMovie: function(event) {
-    currentUserRankings.create({ collection: this.collection });
-    this.addWin(event);
+    currentUserRankings.create({ collection: this.collection }, {success: this.successCallback});
     this.collection.fetch();
     currentUserRankings.fetch();
   },
 
 
   render: function () {
-    // this.remove();
     var html = this.template({ collection: this.collection });
     return this.$el.html(html);
   }
