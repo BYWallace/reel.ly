@@ -15,12 +15,19 @@ class RankingsController < ApplicationController
   end
 
   def update
-    # @ranking = Ranking.find(params[:id])
-    # if @ranking.update(ranking_params)
-    #   render status: 200, nothing: true
-    # else
-    #   render status: 400, nothing: true
-    # end
+    @ranking = Ranking.find(params[:id])
+    if @ranking.update(win_count: win_count + 1)
+      render status: 200, nothing: true
+    else
+      render status: 400, nothing: true
+    end
+  end
+
+  def win
+    @ranking = current_user.rankings.find_by(movie_id: params[:id])
+    @ranking.win_count += 1
+    @ranking.save
+    render json: @ranking
   end
 
   private

@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140710212124) do
   create_table "rankings", force: true do |t|
     t.integer  "user_id"
     t.integer  "movie_id"
-    t.integer  "win_count"
+    t.integer  "win_count",   default: 0
     t.integer  "match_count", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"

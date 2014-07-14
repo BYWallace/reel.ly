@@ -14,11 +14,22 @@ var MovieComparisonView = Backbone.View.extend({
     "click img" : "onSelectMovie"
   },
 
+  addWin: function(event) {
+     $.ajax({
+        url: '/rankings/win/' + $(event.target).data("id"),
+        type: 'post',
+        dataType: 'json'
+        //don't need to send any data...just love-tapping controller
+      });
+  },
+
   onSelectMovie: function(event) {
     currentUserRankings.create({ collection: this.collection });
+    this.addWin(event);
     this.collection.fetch();
     currentUserRankings.fetch();
   },
+
 
   render: function () {
     // this.remove();

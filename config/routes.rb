@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :rankings, only:[:index, :create, :update]
     end
    resources :movies, only:[:index]
+   post "/rankings/win/:id" => "rankings#win"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
