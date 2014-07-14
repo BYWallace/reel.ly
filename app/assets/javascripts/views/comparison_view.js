@@ -17,7 +17,7 @@ var MovieComparisonView = Backbone.View.extend({
   onSelectMovie: function(event) {
     currentUserRankings.create({ collection: this.collection });
     this.collection.fetch();
-    this.render().appendTo(".col-md-10");
+    currentUserRankings.fetch();
   },
 
   render: function () {

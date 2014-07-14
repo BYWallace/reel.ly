@@ -11,7 +11,6 @@ var CurrentRankingsView = Backbone.View.extend({
   },
 
   render: function () {
-    this.remove();
     var html = this.template({ collection: this.collection });
     return this.$el.html(html);
   }
