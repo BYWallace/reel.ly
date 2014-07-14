@@ -1,3 +1,12 @@
+li {
+  list-style-position:inside;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 125%;
+}
+
 .movie-choice {
   cursor: pointer;
   display: inline;
