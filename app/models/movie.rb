@@ -4,8 +4,9 @@ class Movie < ActiveRecord::Base
   def self.generate_imdb250
     top_250 = Imdb::Top250.new
     top_250.movies.each do |movie|
+      movie_title = movie.title.sub(/\d{1,3}.\s+/, "")
       Movie.create(
-        title: movie.title,
+        title: movie_title,
         year: movie.year,
         poster_url: movie.poster
       )
