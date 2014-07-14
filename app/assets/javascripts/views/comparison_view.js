@@ -5,8 +5,8 @@ var MovieComparisonView = Backbone.View.extend({
   template: _.template( $("#movie-comparison-template").html() ),
 
   initialize: function() {
-    // we listen to the collection to rerender on fetches
-    this.listenTo(this.collection, 'sync change add remove', this.render);
+    // listen to the collection to rerender on fetches
+    this.listenTo(this.collection, 'sync change add', this.render);
     this.render();
   },
 
@@ -15,12 +15,13 @@ var MovieComparisonView = Backbone.View.extend({
   },
 
   onSelectMovie: function(event) {
-    event.preventDefault();
     currentUserRankings.create({ collection: this.collection });
+    this.collection.fetch();
+    this.render().appendTo(".col-md-10");
   },
 
   render: function () {
-    this.remove();
+    // this.remove();
     var html = this.template({ collection: this.collection });
     return this.$el.html(html);
   }
