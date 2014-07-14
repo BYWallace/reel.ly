@@ -6,8 +6,16 @@ var MovieComparisonView = Backbone.View.extend({
 
   initialize: function() {
     // we listen to the collection to rerender on fetches
-    this.listenTo(this.collection, 'sync add remove', this.render);
+    this.listenTo(this.collection, 'sync change add remove', this.render);
     this.render();
+  },
+
+  events: {
+    "click img" : "onSelectMovie"
+  },
+
+  onSelectMovie: function() {
+    currentUserRankings.create({ model: this.model });
   },
 
   render: function () {

@@ -4,9 +4,22 @@ class RankingsController < ApplicationController
     render json: @rankings
   end
 
+  def create
+
+  end
+
+  def update
+    @ranking = Ranking.find(params[:id])
+    if @ranking.update(ranking_params)
+      render status: 200, nothing: true
+    else
+      render status: 400, nothing: true
+    end
+  end
+
   private
 
-  def request_params
+  def ranking_params
     params.require(:ranking).permit(:win_count, :match_count)
   end
 
