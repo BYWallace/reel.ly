@@ -25,11 +25,13 @@ var MovieComparisonView = Backbone.View.extend({
   },
 
   onSelectMovie: function(event) {
+    this.$el.fadeOut();
     currentUserRankings.create({ collection: this.collection });
     this.addWin(event);
   },
 
   onButtonClick: function(event) {
+    this.$el.fadeOut();
     movieCollection.fetch();
     currentUserRankings.fetch();
   },
@@ -37,7 +39,7 @@ var MovieComparisonView = Backbone.View.extend({
 
   render: function () {
     var html = this.template({ collection: this.collection });
-    return this.$el.html(html);
+    return this.$el.html(html).hide().fadeIn();
   }
 
 });

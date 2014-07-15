@@ -7,6 +7,6 @@ $(document).ready(function() {
 
   window.movieCollection.fetch().then(function() {
     var movieComparisonView = new MovieComparisonView({collection: movieCollection});
-    movieComparisonView.$el.appendTo(".col-md-10");
+    movieComparisonView.$el.appendTo(".col-md-10").hide().fadeIn();
   });
 });

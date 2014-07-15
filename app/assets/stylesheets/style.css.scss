@@ -16,6 +16,21 @@ li {
   display: inline;
   height: 500px;
   margin: 3% 3%;
+   -webkit-transform: scale(1,1);
+        -webkit-transition-timing-function: ease-out;
+        -webkit-transition-duration: 250ms;
+        -moz-transform: scale(1,1);
+        -moz-transition-timing-function: ease-out;
+        -moz-transition-duration: 250ms;
+
+        &:hover {
+          -webkit-transform: scale(1.05,1.07);
+          -webkit-transition-timing-function: ease-out;
+          -webkit-transition-duration: 250ms;
+          -moz-transform: scale(1.05,1.07);
+          -moz-transition-timing-function: ease-out;
+          -moz-transition-duration: 250ms;
+        }
 }
 
 .video-section .pattern-overlay {
