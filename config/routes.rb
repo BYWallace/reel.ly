@@ -6,10 +6,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcome#index'
    resources :users do
-    resources :rankings, only:[:index, :create, :update]
+    resources :rankings, only:[:index, :create, :update, :watchlist]
+    get "watchlist" => "rankings#watchlist"
     end
    resources :movies, only:[:index]
    post "/rankings/win/:id" => "rankings#win"
+   post "/rankings/add_to_watchlist/:id" => "rankings#add_to_watchlist"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

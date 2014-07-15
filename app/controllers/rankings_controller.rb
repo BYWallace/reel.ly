@@ -4,6 +4,11 @@ class RankingsController < ApplicationController
     render json: @rankings
   end
 
+  def watchlist
+    @watchlist = Ranking.where(user_id: params[:user_id]).where(has_watched: false).map {|ranking| ranking.movie }.sort_by(&:rating).reverse
+    render json: @watchlist
+  end
+
   def create
      @rankings = params[:collection]
      @rankings.each do |movie|
@@ -26,6 +31,13 @@ class RankingsController < ApplicationController
   def win
     @ranking = current_user.rankings.find_by(movie_id: params[:id])
     @ranking.win_count += 1
+    @ranking.save
+    render json: @ranking
+  end
+
+  def add_to_watchlist
+    @ranking = current_user.rankings.find_or_initialize_by(movie_id: params[:id])
+    @ranking.has_watched = false
     @ranking.save
     render json: @ranking
   end

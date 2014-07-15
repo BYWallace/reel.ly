@@ -24,6 +24,15 @@ var MovieComparisonView = Backbone.View.extend({
       }).then(function(){movieCollection.fetch();}).then(function(){currentUserRankings.fetch();});
   },
 
+  addWatchlist: function(event) {
+    $.ajax({
+        url: '/rankings/add_to_watchlist/' + $(event.target).data("id"),
+        type: 'post',
+        dataType: 'json'
+        //don't need to send any data...just love-tapping controller
+      }).then(function(){movieCollection.fetch();}).then(function(){currentUserWatchlist.fetch();});
+  },
+
   onSelectMovie: function(event) {
     this.$el.fadeOut();
     currentUserRankings.create({ collection: this.collection });
@@ -32,8 +41,7 @@ var MovieComparisonView = Backbone.View.extend({
 
   onButtonClick: function(event) {
     this.$el.fadeOut();
-    movieCollection.fetch();
-    currentUserRankings.fetch();
+    this.addWatchlist(event);
   },
 
 
