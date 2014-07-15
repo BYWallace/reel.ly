@@ -38,6 +38,11 @@ li {
   position: relative;
 }
 
+.video-section {
+  position: relative;
+  top: -18px;
+}
+
 .video-section .pattern-overlay {
 background-color: rgba(71, 71, 71, 0.33);
 padding: 110px 0 32px;
@@ -49,7 +54,7 @@ text-align:center;
 color:#fff;
 }
 .video-section h1{
-font-size:110px;
+font-size:60px;
 margin: 40px auto 0px;
 text-shadow: 1px 1px 1px #000;
 -webkit-text-shadow: 1px 1px 1px #000;
