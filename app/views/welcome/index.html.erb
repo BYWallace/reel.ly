@@ -12,8 +12,8 @@
 <script> var currentUserId = <%= current_user.id %></script>
 
 <script type="text/template" id="ranking-list-template">
-  <p><strong>Your Top 10</strong></p>
   <%%= "<p>You've ranked <strong>" + parseInt((collection.length / 250) * 100) + "%</strong> of the IMDb 250!</p>" %>
+  <p><strong>Your Top 10</strong></p>
   <%% for (var i=0; i<10; i++) { %>
     <%% if (collection.models[i]) { %>
     <%%= "<li alt='" + collection.models[i].get('title') + "'><a target='_blank' href=" + collection.models[i].get('imdb_url') + '>' + collection.models[i].get('title') + "</a></li>" %>
