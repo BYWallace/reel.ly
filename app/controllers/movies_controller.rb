@@ -6,7 +6,6 @@ class MoviesController < ApplicationController
     else
       @movies = Movie.limit(2).order("RANDOM()")
     end
-
     render json: @movies
   end
 end
