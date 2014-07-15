@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20140710212124) do
     t.string   "title",      null: false
     t.integer  "year",       null: false
     t.text     "poster_url"
+    t.float    "rating"
+    t.text     "imdb_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140710212124) do
     t.integer  "movie_id"
     t.integer  "win_count",   default: 0
     t.integer  "match_count", default: 0
+    t.boolean  "has_watched", default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -4,6 +4,8 @@ class CreateMovies < ActiveRecord::Migration
       t.string :title, null: false
       t.integer :year, null: false
       t.text :poster_url
+      t.float :rating
+      t.text :imdb_url
 
       t.timestamps
     end

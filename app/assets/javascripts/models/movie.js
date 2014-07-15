@@ -3,7 +3,9 @@ var Movie = Backbone.Model.extend({
     id: 0,
     title: "",
     year: 0,
-    poster_url: ""
+    poster_url: "",
+    rating: 0,
+    imdb_url: ""
   }
 });
 

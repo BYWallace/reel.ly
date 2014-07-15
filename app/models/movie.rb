@@ -8,7 +8,9 @@ class Movie < ActiveRecord::Base
       Movie.create(
         title: movie_title,
         year: movie.year,
-        poster_url: movie.poster
+        poster_url: movie.poster,
+        rating: movie.rating,
+        imdb_url: movie.url
       )
     end
   end

@@ -5,6 +5,7 @@ class CreateRankings < ActiveRecord::Migration
       t.references :movie
       t.integer :win_count, default: 0
       t.integer :match_count, default: 0
+      t.boolean :has_watched, default: true
 
       t.timestamps
     end
