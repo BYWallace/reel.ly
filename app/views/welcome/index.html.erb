@@ -36,7 +36,7 @@
 <script type="text/template" id="movie-comparison-template">
   <%% collection.each(function(movie){  %>
     <div class="col-md-6">
-      <img data-id="<%%= movie.get('id') %>" src="<%%= movie.get('poster_url') %>" class="img-rounded img-responsive movie-choice" alt="<%%= movie.get('title') %>">
+      <img data-id="<%%= movie.get('id') %>" src="http://image.tmdb.org/t/p/w500<%%= movie.get('poster_url') %>" class="img-rounded img-responsive movie-choice" alt="<%%= movie.get('title') %>">
       <figcaption><strong><a target="_blank" href=<%%= movie.get("imdb_url")%>><%%= movie.get('title') + "</a> - " + movie.get('year') %></strong></figcaption>
       <button data-id="<%%= movie.get('id') %>" type="button" class="btn btn-danger">Haven&#39;t seen</button>
     </div>

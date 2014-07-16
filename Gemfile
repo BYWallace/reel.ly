@@ -29,6 +29,7 @@ gem 'devise'
 gem 'imdb', '~> 0.8'
 gem 'pry-rails', group: :development
 gem 'rails_12factor', group: :production
+gem 'themoviedb'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
