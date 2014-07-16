@@ -4,7 +4,7 @@
 
 ### Overview
 
-**Reel.ly** is an application for ranking your top 10 movies via head to head matchups, simultaneously constructing a watchlist of movies you haven't seen. GigHub was developed as the third and final Rails individual project for the April 2014 Web Development Immersive course at General Assembly DC. It was developed over a five day sprint to model the agile software development process.
+[**Reel.ly**](http://reel-ly.herokuapp.com/) is an application for ranking your top 10 movies via head to head matchups, simultaneously constructing a watchlist of movies you haven't seen. GigHub was developed as the third and final Rails individual project for the April 2014 Web Development Immersive course at General Assembly DC. It was developed over a five day sprint to model the agile software development process.
 
 ### Technologies Used
 
