@@ -19,7 +19,7 @@
     <%% } %>
   <%% for (var i=0; i<10; i++) { %>
     <%% if (collection.models[i]) { %>
-    <%%= "<li alt='" + collection.models[i].get('title') + "'><a target='_blank' href=" + collection.models[i].get('imdb_url') + '>' + collection.models[i].get('title') + "</a></li>" %>
+    <%%= "<li alt='" + collection.models[i].get('title') + "'><a target='_blank' href=http://www.imdb.com/title/tt" + collection.models[i].get('imdb_url') + '>' + collection.models[i].get('title') + "</a></li>" %>
     <%% } %>
   <%% } %>
 </script>
@@ -28,7 +28,7 @@
 <p><strong>Watchlist</strong></p>
   <%% for (var i=0; i<10; i++) { %>
     <%% if (collection.models[i]) { %>
-    <%%= "<li alt='" + collection.models[i].get('title') + "'><a target='_blank' href=" + collection.models[i].get('imdb_url') + '>' + collection.models[i].get('title') + "</a></li>" %>
+    <%%= "<li alt='" + collection.models[i].get('title') + "'><a target='_blank' href=http://www.imdb.com/title/tt" + collection.models[i].get('imdb_url') + '>' + collection.models[i].get('title') + "</a></li>" %>
     <%% } %>
   <%% } %>
 </script>
@@ -37,7 +37,7 @@
   <%% collection.each(function(movie){  %>
     <div class="col-md-6">
       <img data-id="<%%= movie.get('id') %>" src="http://image.tmdb.org/t/p/w500<%%= movie.get('poster_url') %>" class="img-rounded img-responsive movie-choice" alt="<%%= movie.get('title') %>">
-      <figcaption><strong><a target="_blank" href=<%%= movie.get("imdb_url")%>><%%= movie.get('title') + "</a> - " + movie.get('year') %></strong></figcaption>
+      <figcaption><strong><a target="_blank" href="http://www.imdb.com/title/tt" + <%%= movie.get("imdb_url")%>><%%= movie.get('title') + "</a> - " + movie.get('year') %></strong></figcaption>
       <button data-id="<%%= movie.get('id') %>" type="button" class="btn btn-danger">Haven&#39;t seen</button>
     </div>
   <%% }) %>
