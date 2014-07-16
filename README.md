@@ -38,7 +38,7 @@ A full list of user stories can be found by looking at [this Pivotal Tracker Pro
 
 ### Wireframe
 
-<img src="/blob/master/movie_ranker_wireframe.png"
+<img src="/blob/master/movie_ranker_wireframe.png">
 
 ***
 Written by Brett Wallace
