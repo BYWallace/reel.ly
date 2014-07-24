@@ -36,7 +36,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'launchy'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'ffaker'
   gem 'simplecov', '~> 0.7.1'
+  gem 'selenium-webdriver'
 end
