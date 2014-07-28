@@ -33,11 +33,14 @@ gem 'themoviedb'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
-  gem 'shoulda-matchers'
-  gem 'capybara'
-  gem 'launchy'
   gem 'factory_girl_rails', '~> 4.0'
-  gem 'ffaker'
+  gem 'shoulda-matchers'
   gem 'simplecov', '~> 0.7.1'
-  gem 'selenium-webdriver'
+end
+
+group :test do
+  gem 'launchy'
+  gem 'ffaker'
+  gem 'capybara'
+  gem 'guard-rspec'
 end
